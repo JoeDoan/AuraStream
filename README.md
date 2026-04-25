@@ -4,7 +4,7 @@
 
 AuraStream is an AI-powered ambient music streaming platform that generates **infinite, royalty-free background music** tailored to specific business vibes — from a cozy morning café to a high-energy gym — using Meta's **MusicGen-Large** foundation model.
 
-[![Demo Video](https://img.shields.io/badge/Demo-Video-red?style=for-the-badge&logo=youtube)](INSERT_DEMO_URL)
+[![Demo Video](https://img.shields.io/badge/Demo-Video-red?style=for-the-badge&logo=youtube)](https://umsystem.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=c23cb546-f7e6-469e-932c-b384018364d3)
 [![Report](https://img.shields.io/badge/Report-PDF-blue?style=for-the-badge&logo=adobeacrobatreader)](Aurastream.pdf)
 
 ---
