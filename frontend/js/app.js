@@ -8,10 +8,9 @@
     'use strict';
 
     // ======================== CONFIG ========================
-    // Copy values from .env file before running
-    const GEMINI_API_KEY  = 'YOUR_GEMINI_API_KEY'; // See .env file
+    const GEMINI_API_KEY = 'GEMINI_API_KEY'; // Gemini API key
 
-    const BACKEND_URL = 'YOUR_BACKEND_URL'; // Colab backend via ngrok (see .env)
+    const BACKEND_URL = 'BACKEND_URL'; // Colab backend via ngrok
 
     // ======================== VIBE DEFINITIONS ========================
     const VIBES = [
@@ -671,13 +670,16 @@
                         method: 'POST',
                         headers: { 'Content-Type': 'application/json' },
                         body: JSON.stringify({
-                            contents: [{ parts: [{ text: `Create a background music vibe based on: "${input}".
+                            contents: [{
+                                parts: [{
+                                    text: `Create a background music vibe based on: "${input}".
 
 Return:
 - name: A catchy short name (2-3 words)
 - icon: A single emoji that represents this vibe
 - prompt: A detailed MusicGen prompt with tempo, instruments, mood. CRITICAL: The prompt MUST include "no vocals, no lyrics, no singing, instrumental only" to ensure purely instrumental output.
-- gradient: A CSS gradient string like "linear-gradient(135deg, #hexcolor1, #hexcolor2)"` }] }],
+- gradient: A CSS gradient string like "linear-gradient(135deg, #hexcolor1, #hexcolor2)"` }]
+                            }],
                             systemInstruction: { parts: [{ text: 'You are an expert sound designer. Always ensure prompts produce instrumental-only music with NO vocals or lyrics.' }] },
                             generationConfig: {
                                 responseMimeType: 'application/json',
