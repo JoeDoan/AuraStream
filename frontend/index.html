@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AuraStream — Royalty-Free Ambient Music for Retail</title>
+    <meta name="description" content="AI-generated, royalty-free ambient music for coffee shops, retail stores, and hotels. No ASCAP/BMI licensing needed.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- Our CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="app" class="app-container">
+
+        <!-- ===================== SIDEBAR ===================== -->
+        <nav class="sidebar" id="sidebar">
+            <!-- Logo -->
+            <div class="sidebar-logo">
+                <div class="logo-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg>
+                </div>
+                <h1 class="logo-text">AuraStream</h1>
+            </div>
+
+            <!-- Scrollable Sidebar Content -->
+            <div class="sidebar-content">
+
+                <!-- Smart PA System -->
+                <div class="pa-card">
+                    <div class="pa-bg-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" x2="12" y1="19" y2="22"/></svg>
+                    </div>
+                    <h2 class="section-label accent">
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/></svg>
+                        Smart PA System
+                    </h2>
+                    <textarea id="announcement-input" placeholder="e.g. Attention shoppers, the cafe closes in 15 minutes."></textarea>
+                    <button id="broadcast-btn" class="btn-broadcast" disabled>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" x2="12" y1="19" y2="22"/></svg>
+                        <span id="broadcast-label">Broadcast Announcement</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Sidebar Footer -->
+            <div class="sidebar-footer">
+                <button id="clear-cache-btn" class="btn-legal" style="font-size: 0.7rem; padding: 8px 12px;">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--red-500);"><path d="M3 6h18"/><path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"/><path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"/></svg>
+                    <span id="clear-cache-label">Clear Audio Cache</span>
+                </button>
+            </div>
+        </nav>
+
+        <!-- ===================== MAIN CONTENT ===================== -->
+        <main class="main-content">
+
+            <!-- Sticky Header -->
+            <header class="main-header">
+                <div>
+                    <h2 class="header-title">Select Vibe</h2>
+                    <p class="header-subtitle">Endless, royalty-free audio streams.</p>
+                </div>
+            </header>
+
+            <!-- Scrollable Content -->
+            <div class="content-area">
+
+                <!-- AI Vibe Architect -->
+                <div class="vibe-architect">
+                    <div class="vibe-architect-inner">
+                        <div class="vibe-architect-left">
+                            <div class="vibe-architect-label">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="icon-indigo"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/></svg>
+                                <h3>Create Custom Vibe</h3>
+                            </div>
+                            <input type="text" id="custom-vibe-input" placeholder="Describe your vibe (e.g., 'Rainy Sunday bookstore', 'Sunset beach party')">
+                        </div>
+                        <button id="generate-vibe-btn" class="btn-generate" disabled>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
+                            <span id="generate-label">Add Vibe</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Vibe Grid -->
+                <div id="vibe-grid" class="vibe-grid">
+                    <!-- Populated by JavaScript -->
+                </div>
+            </div>
+
+            <!-- ===================== PLAYER BAR ===================== -->
+            <div class="player-bar-wrapper">
+                <div class="player-bar">
+                    <!-- Visualizer Canvas (background) -->
+                    <canvas id="visualizer-canvas" class="visualizer-canvas"></canvas>
+
+                    <!-- Player Content -->
+                    <div class="player-content">
+                        <div class="player-controls">
+                            <button id="play-btn" class="btn-play" aria-label="Play/Pause">
+                                <svg id="play-icon" width="28" height="28" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="6 3 20 12 6 21 6 3"/></svg>
+                            </button>
+                            <button id="skip-btn" class="btn-skip" aria-label="Skip">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 4 15 12 5 20 5 4"/><line x1="19" x2="19" y1="5" y2="19"/></svg>
+                            </button>
+                            <div class="volume-control">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="volume-icon"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
+                                <input type="range" id="volume-slider" min="0" max="100" value="75" class="volume-slider">
+                            </div>
+                        </div>
+
+                        <div class="player-info">
+                            <div class="player-info-top">
+                                <div>
+                                    <h3 id="player-vibe-name" class="player-title">Morning Cafe Radio</h3>
+                                    <p class="player-status">
+                                        <span class="pulse-dot small">
+                                            <span class="pulse-ring" id="status-ring"></span>
+                                            <span class="pulse-core inactive" id="status-core"></span>
+                                        </span>
+                                        <span id="status-text">Stream Paused</span>
+                                    </p>
+                                </div>
+                                <span id="generation-status" class="gen-badge">Idle</span>
+                            </div>
+                            <div class="progress-track">
+                                <div id="progress-fill" class="progress-fill" style="width: 0%"></div>
+                            </div>
+                            <div class="player-meta">
+                                <span id="track-counter" class="track-counter">Track 0 of ∞</span>
+                                <span id="track-time" class="track-time">0:00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- ===================== CDN LIBRARIES ===================== -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.4/howler.min.js"></script>
+
+    <!-- ===================== APP SCRIPTS ===================== -->
+    <script src="js/visualizer.js"></script>
+    <script src="js/audioEngine.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

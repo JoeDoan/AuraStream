@@ -1,0 +1,34 @@
+# ======================== IGNORE ========================
+# Environment variables (API keys)
+.env
+
+# Assignment specification (not part of project)
+CS_5542_Quiz_Challenge_2.md
+
+# LaTeX source (PDF is the final deliverable)
+report.tex
+*.aux
+*.log
+*.out
+*.toc
+*.synctex.gz
+
+# React prototype (superseded by vanilla JS)
+UI.jsx
+
+# Node modules
+node_modules/
+frontend/node_modules/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Generated audio (too large for git)
+backend/generated_audio/
+notebooks/aurastream_audio*.zip
+sample_outputs/

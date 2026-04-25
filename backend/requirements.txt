@@ -1,0 +1,8 @@
+torch
+transformers
+accelerate
+scipy
+numpy
+fastapi
+uvicorn[standard]
+pydantic

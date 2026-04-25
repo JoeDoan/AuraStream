@@ -1,0 +1,8 @@
+{
+  "name": "aurastream-frontend",
+  "version": "1.0.0",
+  "description": "AuraStream — Royalty-Free Ambient Music for Retail",
+  "scripts": {
+    "dev": "npx -y serve . -p 5500 --no-clipboard"
+  }
+}
