@@ -158,4 +158,4 @@ The full project report is available as [Aurastream.pdf](Aurastream.pdf), coveri
 
 ---
 
-**Author:** Du Doan — University of Missouri–Kansas City
+**Author:** Joe Doan — University of Missouri–Kansas City
